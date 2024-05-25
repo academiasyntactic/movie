@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
@@ -12,7 +11,7 @@ export default function Home() {
     Poster: string;
   }
 
-  const apiKey = process.env.API_KEY;
+  // const apiKey = process.env.API_KEY;
   const url = `https://www.omdbapi.com/?apikey=8b7cd718`;
   const [movie, setMovie] = useState<string>();
   const [datos, setDatos] = useState<any>(null);

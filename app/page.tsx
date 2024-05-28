@@ -15,7 +15,7 @@ export default function Home() {
   const url = `https://www.omdbapi.com/?apikey=8b7cd718`;
   const [movie, setMovie] = useState<string>();
   const [datos, setDatos] = useState<any>(null);
-  const [movies, setMovies] = useState<Movies[] | undefined >();
+  const [movies, setMovies] = useState<Movies[]>();
 
   const searchMovie = async () => {
     const response = await fetch(`${url}&s=${movie}`);
@@ -38,7 +38,7 @@ export default function Home() {
 
       <div className="text-white">
         {datos && datos.Search ? (
-          movies.map(
+          movies?.map(
             (movie) => (
               <div key={movie.imdbID}>
                 <div className="flex gap-10">

@@ -15,7 +15,7 @@ export default function Home() {
   const url = `https://www.omdbapi.com/?apikey=8b7cd718`;
   const [movie, setMovie] = useState<string>();
   const [datos, setDatos] = useState<any>(null);
-  const [movies, setMovies] = useState<Movies[]>();
+  const [movies, setMovies] = useState<Movies[] | undefined >();
 
   const searchMovie = async () => {
     const response = await fetch(`${url}&s=${movie}`);

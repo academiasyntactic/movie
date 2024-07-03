@@ -33,7 +33,7 @@ export default function Home() {
 
       <div className="flex">
         <input type="text" onChange={(e) => setMovie(e.target.value)} />
-        <button className="bg-red-600" onClick={searchMovie} >Buscar</button>
+        <button className="bg-red-600" onClick={searchMovie} >Busqueda</button>
       </div>
 
       <div className="text-white">
